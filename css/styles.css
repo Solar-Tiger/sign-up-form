@@ -1,0 +1,97 @@
+:root {
+  font-size: 1.4rem;
+  font-family: 'Lovers Quarrel', 'Courier New', Courier, monospace;
+}
+
+/* 
+=========================================================================
+=                         KEVIN POWELL CSS RESET                        =  
+========================================================================= 
+*/
+
+/* 
+  Source: https://www.youtube.com/shorts/2lyDv0wOQuQ
+*/
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+/* 
+  Disabling this for now as this is just a reference to custom properties
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+}
+
+/* dark mode user-agent-styles */
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+body {
+  line-height: 1.3;
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  /* max-width: 100%; */
+}
+
+button,
+select,
+input {
+  font-size: inherit;
+}
+
+/* 
+=========================================================================
+=                          BASIC STYLING BY ME                          =  
+========================================================================= 
+*/
+
+body {
+  background: no-repeat url(../images/wooper-wallpaper.jpg);
+  background-size: cover;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  max-height: 100px;
+  margin-top: 15%;
+}
+
+.page-container {
+  display: flex;
+  height: 100vh;
+}
+
+.page-container div:nth-child(1) {
+  flex: 1 1 25%;
+}
+
+.page-container div:nth-child(2) {
+  flex: 1 1 75%;
+}
+
+.form-container {
+  background-color: white;
+}
