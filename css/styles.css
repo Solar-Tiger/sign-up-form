@@ -1,5 +1,5 @@
 :root {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -136,7 +136,7 @@ form {
   padding: 15px;
   border: none;
   margin: 0 0 0 3rem;
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 2px 2px 5px rgb(102, 102, 102);
 }
 
 .sign-up-form button:hover {
@@ -150,6 +150,12 @@ button {
 
 input {
   padding: 5px;
+}
+
+input:focus {
+  border-color: blue;
+  outline: blue;
+  box-shadow: 2px 2px 5px rgb(102, 102, 102);
 }
 
 li {
