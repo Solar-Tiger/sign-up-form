@@ -177,7 +177,7 @@ li > p {
   bottom: 0;
 }
 
-input + p {
+.error {
   color: red;
   font-size: 0.8rem;
   max-width: 350px;
