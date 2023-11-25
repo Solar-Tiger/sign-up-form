@@ -45,18 +45,19 @@ function pNumberCheck(pNumber, pNumberError, pNumberMaxLength) {
 }
 
 function passwordCheck(pWord, pWordError, regex, pWordMinLength) {
-  if (pWord.value.length === '' || pWord.value.length > pWordMinLength) {
+  console.log(regex.test(pWord.value));
+  if (pWord.value === '' || regex.test(pWord.value)) {
     pWord.style.borderColor = '';
     pWordError.classList.remove('error');
-    pWordError.textContent === '';
-  } else if (!regex.test(input.value) && pWord.value.length < pWordMinLength) {
+    pWordError.textContent = '';
+  } else if (!regex.test(pWord.value) || pWord.value.length < pWordMinLength) {
     pWord.style.borderColor = 'red';
-    pWordError.classList.remove('error');
-    pWordError.textContent === passwordCheck();
+    pWordError.classList.add('error');
+    pWordError.textContent = passwordRequiredCheck(pWord);
   }
 }
 
-function passwordCheck(regexCheck) {
+function passwordRequiredCheck(regexCheck) {
   if (!lowercaseLetter.test(regexCheck.value)) {
     return '*Requires 1 lowercase letter';
   }
@@ -84,7 +85,7 @@ phoneNumber.addEventListener('input', () => {
   pNumberCheck(phoneNumber, phoneNumberError, 10);
 });
 password.addEventListener('input', () => {
-  passworDCheck(password, passwordError, passError);
+  passwordCheck(password, passwordError, passError, 8);
 });
 
 const validateButton = document.querySelector('button');
