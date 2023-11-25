@@ -27,44 +27,45 @@
 
             <p>Seriously... what <em>are</em> you waiting for?</p>
 
-            <form action="" method="post">
+            <form action="" method="post" id="make-wooper-great">
                 <h3>Do it for Wooper!</h3>
 
                 <ul>
                     <li>
-                        <label for="firstname">FIRST NAME</label>
-                        <input type="text" name="firstname" id="firstname">
+                        <label for="firstname">*FIRST NAME</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="John" required>
                         <p class="firstname-error"></p>
                     </li>
                     <li>
                         <label for="lastname">LAST NAME</label>
-                        <input type="text" name="lastname" id="lastname">
+                        <input type="text" name="lastname" id="lastname" placeholder="Smith">
                         <p class="lastname-error"></p>
                     </li>
                     <li>
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
+                        <label for="email">*EMAIL</label>
+                        <input type="email" name="email" id="email" placeholder="johnsmith@gmail.com" required>
                         <p class="email-error"></p>
                     </li>
                     <li>
-                        <label for="phonenumber">PHONE NUMBER</label>
-                        <input type="number" name="phonenumber" id="phonenumber">
+                        <label for="phonenumber">*PHONE NUMBER</label>
+                        <input type="number" name="phonenumber" id="phonenumber" placeholder="1234567890" required>
                         <p class="phonenumber-error"></p>
                     </li>
                     <li>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
+                        <label for="password">*PASSWORD</label>
+                        <input type="password" name="password" id="password" placeholder="Minimum length 8 characters"
+                            required>
                         <p class="password-error"></p>
                     </li>
                     <li>
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                        <label for="confirm-password">*CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required>
                         <p class="confirm-password-error"></p>
                     </li>
                 </ul>
             </form>
 
-            <button type="submit" value="Submit">Create Account</button>
+            <button type="submit" form="make-wooper-great" value="Submit">Create Account</button>
 
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
