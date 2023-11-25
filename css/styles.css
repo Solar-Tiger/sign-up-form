@@ -154,7 +154,7 @@ button {
 
 input {
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 input:focus {
@@ -169,10 +169,16 @@ li {
   list-style-type: none;
   width: calc(50%);
   max-width: 350px;
+  position: relative;
+}
+
+li > p {
+  position: absolute;
+  bottom: 0;
 }
 
 input + p {
   color: red;
   font-size: 0.8rem;
-  visibility: hidden;
+  max-width: 350px;
 }
