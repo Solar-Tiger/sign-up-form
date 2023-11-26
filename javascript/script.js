@@ -2,11 +2,13 @@ const fname = document.getElementById('firstname');
 const lname = document.getElementById('lastname');
 const phoneNumber = document.getElementById('phonenumber');
 const password = document.getElementById('password');
+const cPassword = document.getElementById('confirm-password');
 
 const fnameError = document.querySelector('.firstname-error');
 const lnameError = document.querySelector('.lastname-error');
 const phoneNumberError = document.querySelector('.phonenumber-error');
 const passwordError = document.querySelector('.password-error');
+const cPasswordError = document.querySelector('.confirm-password-error');
 
 const phoneError = /^\d{3}-?\d{3}-?\d{4}-?$/;
 const passError = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\s\w-]).{8,}$/;
@@ -30,7 +32,7 @@ function nameCheck(name, nameError, minLength) {
   }
 }
 
-function pNumberCheck(pNumber, pNumberError, pNumberMaxLength) {
+function pNumberCheck(pNumber, pNumberError) {
   console.log(phoneError.test(pNumber.value));
 
   if (pNumber.value.length === 0 || phoneError.test(pNumber.value)) {
@@ -75,6 +77,18 @@ function passwordRequiredCheck(regexCheck) {
   }
 }
 
+function confirmPasswordCheck(passOne, passTwo, passTwoError) {
+  if (cPassword.value === '' || passOne.value === passTwo.value) {
+    passTwo.style.borderColor = '';
+    passTwoError.classList.remove('error');
+    passTwoError.textContent = '';
+  } else if (passOne.value !== passTwo.value) {
+    passTwo.style.borderColor = 'red';
+    passTwoError.classList.add('error');
+    passTwoError.textContent = '*Passwords do not match';
+  }
+}
+
 fname.addEventListener('input', () => {
   nameCheck(fname, fnameError, 2);
 });
@@ -82,10 +96,13 @@ lname.addEventListener('input', () => {
   nameCheck(lname, lnameError, 2);
 });
 phoneNumber.addEventListener('input', () => {
-  pNumberCheck(phoneNumber, phoneNumberError, 10);
+  pNumberCheck(phoneNumber, phoneNumberError);
 });
 password.addEventListener('input', () => {
   passwordCheck(password, passwordError, passError, 8);
+});
+cPassword.addEventListener('input', () => {
+  confirmPasswordCheck(password, cPassword, cPasswordError);
 });
 
 const validateButton = document.querySelector('button');
