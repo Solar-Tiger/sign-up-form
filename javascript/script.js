@@ -100,6 +100,7 @@ phoneNumber.addEventListener('input', () => {
 });
 password.addEventListener('input', () => {
   passwordCheck(password, passwordError, passError, 8);
+  confirmPasswordCheck(password, cPassword, cPasswordError);
 });
 cPassword.addEventListener('input', () => {
   confirmPasswordCheck(password, cPassword, cPasswordError);
