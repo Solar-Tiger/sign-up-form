@@ -90,11 +90,23 @@ body {
 
 .banner-container {
   display: flex;
+  flex-direction: column;
+}
+
+.banner-container > :nth-child(1) {
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
   max-height: 150px;
   margin-top: 200px;
+}
+
+.banner-container > :nth-child(2) {
+  margin-top: auto;
+  /* margin-bottom: 20px; */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .sign-up-form {
