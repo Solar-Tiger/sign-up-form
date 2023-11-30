@@ -1,6 +1,10 @@
+/* Custom fonts for the text in the banner */
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Lovers+Quarrel&family=Sofia+Sans+Condensed&display=swap');
+
 :root {
   font-size: 1.2rem;
   font-family: 'Courier New', Courier, monospace;
+  --wooper-color: rgb(43, 177, 255);
 }
 
 /* 
@@ -68,6 +72,11 @@ input {
 body {
   background: no-repeat url(../images/wooper-wallpaper.jpg);
   background-size: cover;
+  position: relative;
+}
+
+a {
+  color: var(--wooper-color);
 }
 
 .page-container {
@@ -85,7 +94,8 @@ body {
 
 .heading-text {
   font-family: 'Lovers Quarrel';
-  font-size: 6rem;
+  font-size: 8rem;
+  color: white;
 }
 
 .banner-container {
@@ -97,16 +107,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   max-height: 150px;
   margin-top: 200px;
+  padding-right: 1rem;
 }
 
 .banner-container > :nth-child(2) {
   margin-top: auto;
   /* margin-bottom: 20px; */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .sign-up-form {
@@ -148,7 +160,7 @@ form {
 
 .sign-up-form button {
   color: white;
-  background-color: rgb(43, 177, 255);
+  background-color: var(--wooper-color);
   padding: 15px;
   border: none;
   margin: 0 0 0 3rem;
