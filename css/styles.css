@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Lovers+Quarrel&family=Sofia+Sans+Condensed&display=swap');
 
 :root {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-family: 'Courier New', Courier, monospace;
   --wooper-color: rgb(43, 177, 255);
 }
@@ -54,7 +54,7 @@ picture,
 svg,
 video {
   display: block;
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 button,
@@ -103,6 +103,11 @@ a {
   flex-direction: column;
 }
 
+#wooper {
+  width: 150px;
+  height: auto;
+}
+
 .banner-container > :nth-child(1) {
   display: flex;
   justify-content: center;
@@ -125,7 +130,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   background-color: #eee;
 }
 
@@ -148,20 +153,19 @@ form {
 }
 
 .sign-up-form p {
-  width: 75ch;
+  max-width: 75ch;
 }
 
 .sign-up-form ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 70px;
-  width: clamp(750px, 800px, 850px);
+  gap: 10px 60px;
 }
 
 .sign-up-form button {
   color: white;
   background-color: var(--wooper-color);
-  padding: 15px;
+  padding: 15px 3rem;
   border: none;
   margin: 0 0 0 3rem;
   box-shadow: 2px 2px 5px rgb(102, 102, 102);
@@ -191,8 +195,6 @@ li {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  width: calc(50%);
-  max-width: 350px;
   position: relative;
 }
 
@@ -205,4 +207,57 @@ li > p {
   color: red;
   font-size: 0.8rem;
   max-width: 350px;
+}
+
+@media screen and (min-width: 1256px) {
+  .sign-up-form ul {
+    max-width: 760px;
+  }
+
+  li {
+    width: calc(50%);
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 1255px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .banner-container > :nth-child(1) {
+    margin-top: 0;
+  }
+
+  .sign-up-form > :not(form) {
+    margin: 5px auto;
+  }
+
+  .sign-up-form > :not(button) {
+    padding: 5px 10px;
+  }
+
+  .sign-up-form ul {
+    justify-content: center;
+  }
+
+  li {
+    width: calc(50%);
+    max-width: 350px;
+  }
+
+  .sign-up-form form > h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  li {
+    width: calc(100%);
+    max-width: 450px;
+  }
+
+  .heading-text {
+    font-size: 5rem;
+  }
 }
