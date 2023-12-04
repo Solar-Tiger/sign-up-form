@@ -31,7 +31,7 @@
   padding: 0;
 }
 
-/* dark mode user-agent-styles */
+/* dark mode user-agent-styles and percentage font size base */
 html {
   color-scheme: dark light;
 }
@@ -196,7 +196,7 @@ li {
 
   & > p {
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
   }
 }
 
