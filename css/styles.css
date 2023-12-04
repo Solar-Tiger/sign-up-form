@@ -120,6 +120,7 @@ a {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  padding: 0px 1rem;
 }
 
 .sign-up-form {
