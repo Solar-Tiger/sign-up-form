@@ -227,11 +227,11 @@ li {
   }
 
   .banner-container > :nth-child(1) {
-    margin-top: 0;
+    margin-top: 3rem;
   }
 
   .banner-container > :nth-child(2) {
-    margin-top: 100px;
+    margin-top: 3rem;
   }
 
   .sign-up-form > :not(form) {
