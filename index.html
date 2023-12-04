@@ -9,31 +9,33 @@
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="banner-container">
-            <div>
+    <div class="sign-up-form-container">
+        <section class="banner-container">
+            <article>
                 <img src="images/wooper-two.png" alt="wooper" id="wooper">
                 <p class="heading-text">Wooper</p>
-            </div>
+            </article>
             <p>Wallpaper by <a href="https://www.deviantart.com/sararazayzay/art/A-Wooper-Wallpaper-312168549"
                     target="_blank">SaraRazayzay</a> on
                 <a href="https://www.deviantart.com/" target="_blank">DeviantArt</a>
             </p>
-        </div>
+        </section>
 
         <div class="sign-up-form">
-            <p>We all know Wooper is the best. We all know we want to help Wooper become even more powerful. So what are
+            <h3>We all know Wooper is the best. We all know we want to help Wooper become even more powerful. So what
+                are
                 you waiting for? Sign up to the "help Wooper become even greater!" form and chat with fellow Wooper
-                fans!</p>
+                fans!</h3>
 
-            <p>Seriously... what <em>are</em> you waiting for?</p>
+            <h3>Seriously... what <em>are</em> you waiting for?</h3>
 
             <form action="#" method="post" id="make-wooper-great">
                 <h3>Do it for Wooper!</h3>
 
                 <ul>
                     <li>
-                        <label for="firstname">*FIRST NAME</label>
+                        <label for="firstname"><span class="asterisk-error" aria-label="required">*</span>FIRST
+                            NAME</label>
                         <input type="text" name="firstname" id="firstname" placeholder="John" required>
                         <p class="firstname-error"></p>
                     </li>
@@ -43,23 +45,26 @@
                         <p class="lastname-error"></p>
                     </li>
                     <li>
-                        <label for="email">*EMAIL</label>
+                        <label for="email"><span class="asterisk-error" aria-label="required">*</span>EMAIL</label>
                         <input type="email" name="email" id="email" placeholder="johnsmith@gmail.com" required>
                         <p class="email-error"></p>
                     </li>
                     <li>
-                        <label for="phonenumber">*PHONE NUMBER</label>
+                        <label for="phonenumber"><span class="asterisk-error" aria-label="required">*</span>PHONE
+                            NUMBER</label>
                         <input type="tel" name="phonenumber" id="phonenumber" placeholder="123-456-7890" required>
                         <p class="phonenumber-error"></p>
                     </li>
                     <li>
-                        <label for="password">*PASSWORD</label>
+                        <label for="password"><span class="asterisk-error"
+                                aria-label="required">*</span>PASSWORD</label>
                         <input type="password" name="password" id="password" placeholder="Minimum length 8 characters"
                             required>
                         <p class="password-error"></p>
                     </li>
                     <li>
-                        <label for="confirm-password">*CONFIRM PASSWORD</label>
+                        <label for="confirm-password"><span class="asterisk-error" aria-label="required">*</span>CONFIRM
+                            PASSWORD</label>
                         <input type="password" name="confirm-password" id="confirm-password" required>
                         <p class="confirm-password-error"></p>
                     </li>
