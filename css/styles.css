@@ -249,6 +249,11 @@ li {
   .sign-up-form form > h3 {
     text-align: center;
   }
+
+  li {
+    width: calc(50%);
+    max-width: 350px;
+  }
 }
 
 @media screen and (max-width: 778px) {
